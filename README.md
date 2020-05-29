@@ -22,6 +22,12 @@
   - [x] Win10
   - [ ] Xbox
   - [ ] Win-ME
+- [ ] [MacOS](https://github.com/langong-dev/Zff.git)
+- [ ] [Linux](https://github.com/langong-dev/Zff.git)
+  - [ ] ARM
+  - [ ] X86
+  - [ ] X64
+  - [ ] X32
 
 ### 下载方式
 [击上方```release```进入版本下载。](https://github.com/langong-dev/zff-Win/releases)

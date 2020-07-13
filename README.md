@@ -1,6 +1,6 @@
 # 撞FuFu
 
-### 支持的OS
+### 支持的OS Support for
 
 - [x] Microsofts
   - [ ] Win1.0
@@ -29,15 +29,9 @@
   - [ ] X64
   - [ ] X32
 
-### 下载方式
-[击上方```release```进入版本下载。](https://github.com/ohzff/zff-Win/releases)
-**不要**直接下载**本页面**!
+### Downloads 下载方式
+[Click me 点我](https://github.com/ohzff/zff-Win/releases)
 
 ### 使用
 
 双击运行`zff_main.exe`
-
-### 喜讯
-
-zff从4.0版本开始将支持linux和MacOS系统！
-[点击前往](https://github.com/ohzff/Zff/)

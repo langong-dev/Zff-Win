@@ -1,9 +1,7 @@
 /*
-LanGongINC
-LanGongDEV
-中国蓝光科技股份有限公司
-中国蓝光科技开发团队DEV-TEAM
-copy right 2017~2020 
+
+Made by LanGong on GitHub and LFP
+
 */
 #include<iostream>
 #include<conio.h>
@@ -113,38 +111,37 @@ void maken(){
 	putlevel(0);
 	level=getlevel();
 	putboot(1);
-	printf("欢迎使用LanGong撞FuFu游戏。\n");
+	printf("Welcome to LanGong Zff game for Windows\n");
 	Sleep(1000);
-	printf("设定您的用户名\n");
+	printf("Please input a username\n");
 	string UserNameSET;
 	getline(cin,UserNameSET);
 	putuser(UserNameSET);
-	printf("即将完成……");
+	printf("Set successfully!");
 	Sleep(100);
 	system("cls");
 	Sleep(100);
 }
 int start(){
 	system("color F0");
-	printf("\n\n\n              LanGongINC \n              LanGongDEV \n");
-	Sleep(3000);
 	system("cls");
-	printf("请稍后……\n");
+	printf(" Please wait...\n");
 	level=getlevel();
 	system("cls");
-	printf("                撞Fufu \n\n\n\n\n\n\n\n\n\n                 欢迎\n");
-	Sleep(3000);
+	printf(" LanGong Zff game, Welcome!\n");
+	Sleep(500);
 	if(level==-1||getboot()!=1){
 		maken();
 	}
 	system("cls");
-	printf("              欢迎");
+	printf(" Welcome, ");
 	level=getlevel();
 	name=getuser();
 	cout<<name<<endl;
-	printf("             您的等级%d\n\n\n\n",level);
-	printf("          推荐使用英文输入\n");
-	Sleep(2000);
+	printf(" Your level is %d\n\n",level);
+	//printf("          Please press with English!\n");
+	//Sleep(1000);
+	system("pause");
 	"MB_OK";
 	if(level==-1){
 		return 1;
@@ -159,13 +156,13 @@ int game(){
 		if(fx==hx&&fy==hy){
 			putlevel(level+1);
 			system("cls");
-			printf("游戏结束，恭喜！胜利！成功晋级！您的等级%d\n继续游戏？[继续：Enter / 离开：Q]\n",level+1);
+			printf(" Game over, You win! your level is %d\nDo you want to continue? [Enter]Continue/[q]Quit\n",level+1);
 			while(1){
 				int r=check(keyboard());
 				if(r==13)return 1;
 				else if(r==9)return 0;
 				else{
-					printf("ERR4: 输入无效 请重新输入……\n");
+					printf(" ----------ERR4: Option not found, Input again!----------\n");
 				}
 			}
 		}
@@ -183,7 +180,7 @@ int game(){
 			}
 			cout<<endl;
 		}
-		printf("\n使用“上下左右”按键以控制小人，按下R键重新开始\n");
+		printf("\n Use [Up][Dn][Lf][Rt] to ctrl 'H', Press 'R' to reboot game\n");
 		int r=check(keyboard());
 		if(r==224)continue;
 //		cout<<r;
@@ -204,21 +201,21 @@ int game(){
 			//move
 			system("cls");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
-				printf("----------ERR1:出界----------\n");
-				Sleep(1500);
+				printf(" ----------ERR1: Out!----------\n");
+				Sleep(100);
 				continue;
 			}
 			if(field[hx+nx[r]][hy+ny[r]]==6){
 				putlevel(level+1);
 				system("cls");
-				printf("游戏结束，恭喜！胜利！成功晋级！您的等级%d\n继续游戏？[继续：Enter / 离开：Q]\n",level+1);
+				printf(" Game over, You win! your level is %d\nDo you want to continue? [Enter]Continue/[q]Quit\n",level+1);
 				int r=check(keyboard());
 				while(1){
 					int r=check(keyboard());
 					if(r==13)return 1;
 					else if(r==9)return 0;
 					else{
-						printf("------ERR4: 输入无效 请重新输入------\n");
+						printf(" ----------ERR4: Option not found, Input again!----------\n");
 					}
 				}
 			}
@@ -296,6 +293,7 @@ int game(){
 }
 void start_game(){
 	system("cls");
+	printf(" Creating data...\n");
 	memset(field,0,sizeof(field));
 //	cout<<"@"<<endl;
 	if(level<=10){
@@ -339,7 +337,11 @@ void start_game(){
 	}
 	fx=n-1,fy=n-1,hx=2,hy=2;
 	field[2][2]=5,field[n-1][n-1]=6;
-	if(game()==1)start_game();
+	system("cls");
+	printf(" Use [Up][Dn][Lf][Rt] to ctrl 'H', Press 'R' to reboot game\n\n\n");
+	system("pause");
+	int gm=game();
+	if(gm==1)start_game();
 }
 void findpalse(){
 	if(getpalse()){
@@ -350,11 +352,13 @@ void findpalse(){
 	}
 }
 void goodbye(){
-	printf("\n           欢迎下次再来！\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
+	system("cls");
+	printf(" Exit\n\n");
+	system("pause");
 }
 int main(){
 	if(start()){
-		printf("--------ERR3: start error--------\n");
+		printf(" ----------ERR3: start error!----------\n");
 		return -3;
 		exit(-3);
 	}

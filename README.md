@@ -10,6 +10,7 @@
   - [ ] Win3.x
   - [ ] Win-CE
   - [ ] Win-NT
+  - [x] Win-2000
   - [x] Win-XP
   - [ ] Win-Mobile
   - [ ] Win-Server2003

@@ -1,12 +1,8 @@
-LanGongINC™
-LanGongDEV™
-中国蓝光科技股份有限公司
-中国蓝光科技开发团队DEV-TEAM
-©copy right 2017~2020 
-该文件项目类群版权归中国蓝光科技股份有限公司所有
+OhMySh & LanGong Development Team
+Copyright 2017~2021
+该文件项目类群版权归LanGong Dev所有
 
 ------------------------------------------------------------------------
-特别鸣谢 DEV-CPP IDE 
 
 
                                                        20200110 202453 LanGongINC

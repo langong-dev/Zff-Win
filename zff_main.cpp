@@ -9,8 +9,8 @@ Made by LanGong on GitHub and LFP
 #include<cstdio>
 #include<cstdlib>
 #include<queue>
-#include"get.cpp"
-#include"rand.cpp"
+#include"win-get.cpp"
+#include"win-rand.cpp"
 using namespace std;
 typedef const int ci;
 typedef const char cc;
@@ -24,8 +24,8 @@ int keyboard()
 	while (1)
 	{
 		if (_kbhit())
-		{//如果有按键按下，则_kbhit()函数返回真
-			ch = _getch();//使用_getch()函数获取按下的键值
+		{
+			ch = _getch();
 			Sleep(10);
 			return ch;
 		}
@@ -142,7 +142,6 @@ int start(){
 	//printf("          Please press with English!\n");
 	//Sleep(1000);
 	system("pause");
-	"MB_OK";
 	if(level==-1){
 		return 1;
 	}
@@ -156,7 +155,7 @@ int game(){
 		if(fx==hx&&fy==hy){
 			putlevel(level+1);
 			system("cls");
-			printf(" Game over, You win! your level is %d\nDo you want to continue? [Enter]Continue/[q]Quit\n",level+1);
+			printf(" You win! your level is %d\nDo you want to continue? [Enter]Continue/[q]Quit\n",level+1);
 			while(1){
 				int r=check(keyboard());
 				if(r==13)return 1;
@@ -189,14 +188,6 @@ int game(){
 			system("cls");
 			return 1;
 		}
-		/*
-		if(r==8){
-			system("cls");
-			putpalse();
-			printf("缓存加载完毕，再见\n");
-			Sleep(2000);
-			exit(1);
-		}*/
 		if(r>0&&r<5){
 			//move
 			system("cls");
@@ -226,7 +217,7 @@ int game(){
 				field[hx][hy]=5;
 				field[hx-nx[r]][hy-ny[r]]=0;
 			}
-//			printf("成功\n");
+//			printf("锟缴癸拷\n");
 //			Sleep(1);
 //			cout<<hx<<hy<<endl;
 //			Sleep(5000);

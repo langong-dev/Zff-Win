@@ -1,5 +1,11 @@
 # 撞FuFu
 
+本项目已经移动到 [ohZff/Zff](https://github.com/ohzff/Zff) 。
+
+<!--
+
+!History
+
 ### 支持的OS Support for
 
 - [x] Microsofts
@@ -36,3 +42,5 @@
 ### 使用
 
 双击运行`zff_main.exe`
+
+-->
